@@ -1,7 +1,7 @@
 import { Component }  from "@angular/core";
 import { Router } from "@angular/router";
 import {IonContent} from '@ionic/angular/standalone';
-
+import{ IonButton} from '@ionic/angular/standalone';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -14,5 +14,9 @@ export class HomePage {
 
   gotoLogin(): void {
     this.router.navigate(['/login'], { replaceUrl: true });
+  }
+
+  gotoRegister(): void {
+    this.router.navigate(['/register'], { replaceUrl: true });
   }
 }
