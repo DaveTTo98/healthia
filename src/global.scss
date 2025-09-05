@@ -34,4 +34,252 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+// @import '@ionic/angular/css/palettes/dark.system.css';
+
+//GLOBAL VARIABLES PROJECTS
+
+:root{
+/*main colors*/
+--background_color: #793da8;
+--buttons_color: #50c5e9;
+--deep_blue:#3e34c1;
+--white_color: #ffffff;
+--black_color: #000000;
+--heart-color:#F3654F;
+
+/*FONT FAMILIES*/
+--app-text_font: 'Times new roman', serif;
+--user-name_font: 'Times new roman', serif;
+--app-name_font: 'cambria', serif;
+
+
+/*GLOBALS*/
+/*convert 10px to rem */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+hr{
+    border: 0;
+    height: 0.5px;
+    background: var(--heart-color);
+}
+
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+
+.app-text_card{
+    font-family: var(--app-text_font);
+    font-size: 1.2rem;
+    color: var(--black_color);
+}
+
+/*body padding && background*/
+
+ion-content{
+    --background: var(--background_color);
+}
+
+/*CENTER CONTAINER*/
+.centered-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;
+}
+ 
+
+
+/*LOGO SIZES */
+
+.app-logo_splash{
+    
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app-logo_medium{
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+}
+.app-logo_small{
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+}
+.app-logo_headers{
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+}
+/*APP NAME*/
+.app-name{
+    font-family: var(--app-name_font);
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.app-name_headers{
+    font-family: var(--app-name_font);
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/*Titles sizes*/
+
+h1{
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var(--white_color);
+}
+h2{
+    font-size: 2.4rem;
+    font-weight: 200;
+    color: var(--white_color);
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-size: 1.6rem;
+    color: var(--white_color);
+}
+
+/*style assets*/
+.underscore{
+    border-bottom: var(--heart-color);
+}
+
+.google_button-log{
+    margin: 0 auto;
+    border: 1px solid var(--deep_blue);
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: var(--white_color);
+    color: var(--white_color);
+    padding: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+.large_button{
+    margin: 0 auto;
+    border: 1px solid var(--deep_blue);
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: var(--buttons_color);
+    color: var(--white_color);
+    padding: 1rem;
+    letter-spacing: 0.2rem;
+}
+.short_button{
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid var(--deep_blue);
+    border-radius: 15px;
+    font-size: 14px;
+    background-color: var(--buttons_color);
+    color: var(--white_color);
+    padding: 10px
+}
+.input_text{
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: var(--white_color);
+    color: var(--black_color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-color: var(--deep_blue);
+}
+
+/*ANIMATIONS*/
+/*bounce animation*/
+.bounce {
+   display: inline-block;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(-8px); 
+  }
+}
+
+.loader {
+    margin: 1rem 0 1rem 0;
+  width: 60px;
+  aspect-ratio: 1;
+  background: linear-gradient( #F3654F 0 0) bottom/100% 0% no-repeat #ccc;
+  -webkit-mask: 
+    radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left, 
+    radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right , 
+    linear-gradient(to bottom left, #000 42%,#0000 43%) bottom left , 
+    linear-gradient(to bottom right,#000 42%,#0000 43%) bottom right;
+  -webkit-mask-size: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  animation: fill 3s  linear;
+}
+@keyframes fill {
+    90%,100% {background-size:100% 100%}
+}
+
+/*END OF ANIMATION*/
+
+/*MARKUP STYLE*/
+.user-name{
+    color: var(--white_color);
+    font-family: 'times new roman', serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    margin: 0rem;
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+/*MEDIA QUERYS*/
+@media(max-width: 480px){
+    .app-logo_splash{
+        width: 12rem;
+        height: 12rem;
+    }
+    .app-name{
+        font-size: 1.8rem;
+    }
+    .user-name{
+        font-size: 1.2rem;
+        right: 6.8rem;
+        bottom: 9rem;
+    }
+}
+
+
+}

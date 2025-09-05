@@ -1,0 +1,21 @@
+.description-text_container{
+    max-width: 40rem;
+    text-align: center;
+    .app-description{
+        font-size: 1.4rem;
+        font-family: 'Times new roman', serif;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
+}
+
+.register-button_text{
+    text-align: center;
+    .register_button-action{
+        font-size: 1.2rem;
+        color: var(--white_color);
+        border-bottom: 1px solid var(--white_color);
+        font-family: 'Times new roman', serif;
+        letter-spacing: 0.2rem;
+    }
+}

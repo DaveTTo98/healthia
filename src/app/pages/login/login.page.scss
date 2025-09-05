@@ -1,0 +1,95 @@
+.login-card{
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--white_color);
+    margin: auto;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.app-intro{
+    max-width: 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+ .main-name{
+        color: var(--background_color);
+        font-size: 2rem;
+    }
+
+    .intro-text{
+        font-size: 1.2rem;
+        color: var(--black_color);
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    ion-input:focus-within {
+  --highlight-color: var(--background_color); }
+
+  .inputs{
+    display: flex;flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    color: var(--deep_blue);
+  }
+
+  ion-input{
+    width: 100%;
+  }
+.login-button_container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+  .login_button{
+    width: 12rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+  }
+
+  .forget_password{
+    text-align: center;
+    color: var(--deep_blue);
+  }
+  .forget-password_label{
+    color: var(--heart-color);
+    font-size: 1rem;
+
+  }
+
+  .underscore{
+    color: var(--heart-color);
+    border-bottom: 2px solid  var(--heart-color);
+}
+
+.google_button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.google_button p{
+    font-size: 1rem;
+    color: var(--black_color);
+    text-transform: uppercase;
+}
+
+.google_logo{
+    width: 2rem;
+    height: 2rem;
+}
+
+  
+  
