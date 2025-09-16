@@ -8,24 +8,20 @@
       <p>Regístrate y descubre la manera más moderna y divertida de cuidar tu salud</p>
     </div>
     <div class="register-fields">
-      <ion-input label="Nombres" label-placement="floating" fill="outline"
-          placeholder="Nombres"></ion-input>
-          <ion-input label="Apellidos" label-placement="floating" fill="outline"
-          placeholder="Apellidos"></ion-input>
-          <ion-input type="mail" label="Email" label-placement="floating" fill="outline"
-          placeholder="Email"></ion-input>
-          <ion-input label="Teléfono" label-placement="floating" fill="outline"
-          placeholder="Teléfono"></ion-input>
-          <ion-input type="password" label="Contraseña" label-placement="floating" fill="outline"
-          placeholder="Contraseña">
-           <ion-input-password-toggle class="eye" slot="end" ></ion-input-password-toggle>
-        </ion-input>
-          <ion-input type="password" label="Repetir Contraseña" label-placement="floating" fill="outline"
-          placeholder=" Repite Contraseña">
-           <ion-input-password-toggle class="eye" slot="end" ></ion-input-password-toggle>
-        </ion-input>
-        <ion-checkbox>He leido y aceptado los términos y condiciones</ion-checkbox>
-          
+      <ion-input label="Nombres" label-placement="floating" fill="outline" placeholder="Nombres" [(ngModel)]="registerData.names" ></ion-input>
+      <ion-input label="Apellidos" label-placement="floating" fill="outline" placeholder="Apellidos" [(ngModel)]="registerData.lastname"></ion-input>
+      <ion-input type="mail" label="Email" label-placement="floating" fill="outline" placeholder="Email" [(ngModel)]="registerData.email"></ion-input>
+      <ion-input label="Teléfono" label-placement="floating" fill="outline" placeholder="Teléfono" [(ngModel)]="registerData.tel"></ion-input>
+      <ion-input type="password" label="Contraseña" label-placement="floating" fill="outline" placeholder="Contraseña" [(ngModel)]="registerData.password">
+        <ion-input-password-toggle class="eye" slot="end"></ion-input-password-toggle>
+      </ion-input>
+      <ion-input type="password" label="Repetir Contraseña" label-placement="floating" fill="outline"
+        placeholder=" Repite Contraseña" [(ngModel)]="registerData.repeatPassword">
+        <ion-input-password-toggle class="eye" slot="end"></ion-input-password-toggle>
+      </ion-input>
+      <ion-checkbox [(ngModel)]="registerData.terms">He leido y aceptado los términos y condiciones</ion-checkbox>
+      <ion-button expand="block" fill="solid" class="custom-button" (click)="goToLogin()">Registrarse</ion-button>
+
     </div>
   </div>
 </ion-content>
