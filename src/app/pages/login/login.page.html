@@ -5,35 +5,58 @@
         <img class="app-logo_headers" src="assets/images/healthia_logo.png" alt="">
         <h1 class="app-name_headers main-name no-margin">HEALTHIA</h1>
       </div>
-      <p class="app-text_card intro-text">Encuentra en un solo espacio lo necesario para construir hábitos saludables
-      </p>
+      <p class="app-text_card intro-text">Encuentra en un solo espacio lo necesario para construir hábitos saludables</p>
       <hr>
+      
       <div class="inputs">
-        <ion-input label="Usuario" label-placement="floating" fill="outline"
-          placeholder="Nombre de usuario"></ion-input>
+        <ion-input 
+          [(ngModel)]="loginData.username"
+          label="Usuario" 
+          label-placement="floating" 
+          fill="outline"
+          placeholder="Nombre de usuario"
+        ></ion-input>
 
-        <ion-input type="password" label="Contraseña" label-placement="floating" fill="outline"
-          placeholder="Contraseña">
-           <ion-input-password-toggle class="eye" slot="end" ></ion-input-password-toggle>
+        <ion-input 
+          [(ngModel)]="loginData.password"
+          type="password" 
+          label="Contraseña" 
+          label-placement="floating" 
+          fill="outline"
+          placeholder="Contraseña"
+        >
+          <ion-input-password-toggle class="eye" slot="end"></ion-input-password-toggle>
         </ion-input>
 
         <div class="login-button_container">
-          <button  class="short_button login_button">
+          <button  
+            class="short_button login_button" 
+            (click)="profile()"
+            [disabled]="!loginData.username.trim() || !loginData.password.trim()"
+            [class.disabled-button]="!loginData.username.trim() || !loginData.password.trim()"
+          >
             Ingresar
           </button>
+          
           <p class="forget-password_label no-margin">¿Olvidaste tu contraseña?</p>
-          <a  href="#" class="forget_password no-margin">Recuperala <span class="underscore">aquí</span></a>
+          <a href="#" class="forget_password no-margin">Recuperala <span class="underscore">aquí</span></a>
         </div>
 
         <div class="google_login">
           <button class="google_button-log google_button">
             <img class="google_logo" src="assets/icon/Google.png" alt="google logo">
-             <p> Ingresar con Google</p>
+            <p>Ingresar con Google</p>
           </button>
-         
         </div>
 
-
+        <div class="register-link">
+          <p>
+            ¿No tienes cuenta? 
+            <a class="register_link" (click)="goToRegister()">
+              Regístrate aquí
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </div>

@@ -46,6 +46,7 @@
 --white_color: #ffffff;
 --black_color: #000000;
 --heart-color:#F3654F;
+--user-status-color: #4cd137;
 
 /*FONT FAMILIES*/
 --app-text_font: 'Times new roman', serif;
@@ -189,7 +190,7 @@ p{
 .large_button{
     margin: 0 auto;
     border: 1px solid var(--deep_blue);
-    border-radius: 25px;
+    border-radius: 1rem;
     font-size: 20px;
     background-color: var(--buttons_color);
     color: var(--white_color);
@@ -201,7 +202,7 @@ p{
     text-align: center;
     text-transform: uppercase;
     border: 1px solid var(--deep_blue);
-    border-radius: 15px;
+    border-radius: 1rem;
     font-size: 14px;
     background-color: var(--buttons_color);
     color: var(--white_color);

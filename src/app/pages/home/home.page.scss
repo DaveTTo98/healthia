@@ -18,4 +18,13 @@
         font-family: 'Times new roman', serif;
         letter-spacing: 0.2rem;
     }
+
+    
 }
+
+.buttons-container{
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+
+    }

@@ -26,9 +26,14 @@ export const routes: Routes = [
     path: 'recover-password',
     loadComponent: () => import('./pages/recover-password/recover-password.page').then( m => m.RecoverPasswordPage)
   },
+   {
+    path: 'profile',
+    loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
+  },
   {
     path:'**',
     redirectTo: '/splash',
   },
+ 
   
 ];
